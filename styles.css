@@ -1,0 +1,71 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f3f4f6;
+}
+
+.icon-skill {
+    transition: transform 0.2s ease-in-out;
+}
+
+.icon-skill:hover {
+    transform: scale(1.1);
+}
+
+#curriculum-content {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Melhorias para impressão */
+@media print {
+    body {
+        background-color: white !important;
+    }
+    
+    #download-btn {
+        display: none !important;
+    }
+    
+    #curriculum-content {
+        box-shadow: none !important;
+        border: 1px solid #e5e7eb;
+    }
+}
+
+/* Animações suaves */
+.transition-colors {
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+}
+
+/* Melhorias de acessibilidade */
+@media (prefers-reduced-motion: reduce) {
+    .icon-skill {
+        transition: none;
+    }
+    
+    .transition-colors {
+        transition: none;
+    }
+}
+
+/* Estilos para links */
+a {
+    transition: color 0.2s ease-in-out;
+}
+
+a:hover {
+    color: #1d4ed8;
+}
+
+/* Melhorias para dispositivos móveis */
+@media (max-width: 640px) {
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
+    #curriculum-content {
+        padding: 1.5rem;
+    }
+} 

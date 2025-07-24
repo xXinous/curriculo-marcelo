@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículo - Marcelo Pessoa de Aguiar Lopes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="config.js"></script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <div class="container mx-auto p-4 sm:p-8 max-w-5xl">
+        <!-- Botão de Download -->
+        <div class="text-center mb-8">
+            <button id="download-btn" class="bg-blue-600 text-white font-bold py-3 px-6 rounded-lg shadow-lg hover:bg-blue-700 transition-colors duration-300">
+                <i class="fas fa-download mr-2"></i> Baixar Currículo em PDF
+            </button>
+        </div>
+
+        <!-- Conteúdo do Currículo -->
+        <div id="curriculum-content" class="bg-white rounded-lg p-6 sm:p-10">
+            <!-- Cabeçalho -->
+            <header class="flex flex-col sm:flex-row items-center justify-between mb-10 pb-6 border-b border-gray-200">
+                <div class="text-center sm:text-left">
+                    <h1 class="text-4xl sm:text-5xl font-bold text-gray-900">Marcelo Pessoa de Aguiar Lopes</h1>
+                    <p class="text-xl text-gray-600 mt-2">Game Designer & Desenvolvedor</p>
+                </div>
+                <div class="mt-6 sm:mt-0 flex-shrink-0">
+                    <img src="assets/profile-photo.jpg" onerror="this.onerror=null;this.src='https://placehold.co/120x120/E2E8F0/4A5568?text=MP';" alt="Foto de Marcelo Pessoa" class="rounded-full w-24 h-24 sm:w-32 sm:h-32 object-cover shadow-md">
+                </div>
+            </header>
+
+            <!-- Corpo Principal -->
+            <main class="grid grid-cols-1 md:grid-cols-5 gap-12">
+                <!-- Coluna da Esquerda (Contato, Formação, Cursos, Idiomas) -->
+                <div class="md:col-span-2 space-y-8">
+                    <section>
+                        <h2 class="text-2xl font-bold text-blue-600 border-b-2 border-blue-200 pb-2 mb-4">Contato</h2>
+                        <ul class="space-y-3 text-gray-700">
+                            <li class="flex items-start"><i class="fas fa-phone-alt w-5 mr-3 text-blue-500 pt-1"></i><span>(41) 98826-4641</span></li>
+                            <li class="flex items-start"><i class="fas fa-envelope w-5 mr-3 text-blue-500 pt-1"></i><span>marcelopessoa.exe@gmail.com</span></li>
+                            <li class="flex items-start"><i class="fas fa-map-marker-alt w-5 mr-3 text-blue-500 pt-1"></i><span>Portão, Curitiba / PR</span></li>
+                            <li class="flex items-start"><i class="fas fa-globe w-5 mr-3 text-blue-500 pt-1"></i><span><a href="https://marcelop.carrd.co/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline font-semibold">Portfólio<i class="fas fa-external-link-alt fa-xs ml-1 opacity-75"></i></a></span></li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2 class="text-2xl font-bold text-blue-600 border-b-2 border-blue-200 pb-2 mb-4">Formação</h2>
+                        <div class="space-y-4">
+                            <div>
+                                <h3 class="font-semibold text-lg">Jogos Digitais</h3>
+                                <p class="text-gray-600">Cruzeiro do Sul</p>
+                                <p class="text-sm text-gray-500">Cursando - 3º de 4 períodos</p>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-lg">Design</h3>
+                                <p class="text-gray-600">Pontifícia Universidade Católica do Paraná (PUCPR)</p>
+                                <p class="text-sm text-gray-500">Trancado - 4º Período</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section>
+                        <h2 class="text-2xl font-bold text-blue-600 border-b-2 border-blue-200 pb-2 mb-4">Cursos e Certificações</h2>
+                        <div class="space-y-3">
+                            <div>
+                                <p class="font-semibold"><a href="https://www.coursera.org/account/accomplishments/verify/WUZAJ4PBULH5" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Fundamentos de IA (Google)<i class="fas fa-external-link-alt fa-xs ml-1 opacity-75"></i></a></p>
+                                <p class="text-gray-600 text-sm">Certificação em princípios de Inteligência Artificial.</p>
+                            </div>
+                            <div>
+                                <p class="text-gray-700 font-semibold">Desenvolvimento Contínuo</p>
+                                <p class="text-gray-600 text-sm">Cursos online contínuos em programação, design, IA e game design para me manter atualizado e apto para novos desafios.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section>
+                        <h2 class="text-2xl font-bold text-blue-600 border-b-2 border-blue-200 pb-2 mb-4">Idiomas</h2>
+                        <div class="space-y-2">
+                            <p class="text-gray-700">Inglês - Básico</p>
+                            <p class="text-gray-700">Japonês - Básico</p>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Coluna da Direita (Experiência, Habilidades) -->
+                <div class="md:col-span-3 space-y-8">
+                    <section>
+                        <h2 class="text-2xl font-bold text-blue-600 border-b-2 border-blue-200 pb-2 mb-4">Experiência Profissional</h2>
+                        <div class="space-y-6">
+                            <div class="relative pl-6">
+                                <div class="absolute left-0 top-1 w-3 h-3 bg-blue-500 rounded-full"></div>
+                                <h3 class="font-bold text-xl">Assessor da Diretoria de IA</h3>
+                                <p class="font-semibold text-gray-600">Secretaria da Inovação e Inteligência Artificial | Set 2024 - Atualmente</p>
+                                <p class="text-gray-700 mt-1">Suporte estratégico e técnico para a diretoria, envolvendo análise de projetos e implementação de soluções com IA.</p>
+                            </div>
+                            <div class="relative pl-6">
+                                <div class="absolute left-0 top-1 w-3 h-3 bg-blue-500 rounded-full"></div>
+                                <h3 class="font-bold text-xl">Redator e Criador de Conteúdo</h3>
+                                <p class="font-semibold text-gray-600">Portal Próprio | Nov 2024 - Atualmente</p>
+                                <p class="text-gray-700 mt-1">Produção de análises e conteúdo sobre games e a indústria, com textos técnicos e para o público geral.</p>
+                            </div>
+                            <div class="relative pl-6">
+                                <div class="absolute left-0 top-1 w-3 h-3 bg-blue-500 rounded-full"></div>
+                                <h3 class="font-bold text-xl">Game Designer</h3>
+                                <p class="font-semibold text-gray-600">Autônomo | 2022 - Atualmente</p>
+                                <p class="text-gray-700 mt-1">Concepção, prototipação e desenvolvimento de mecânicas de jogos para projetos independentes.</p>
+                            </div>
+                             <div class="relative pl-6">
+                                <div class="absolute left-0 top-1 w-3 h-3 bg-blue-500 rounded-full"></div>
+                                <h3 class="font-bold text-xl">Redator Freelancer</h3>
+                                <p class="font-semibold text-gray-600">Nintendo Blast | Abr 2024 - Nov 2024</p>
+                                <p class="text-gray-700 mt-1">Criação de artigos e análises sobre o cenário de games.</p>
+                            </div>
+                             <div class="relative pl-6">
+                                <div class="absolute left-0 top-1 w-3 h-3 bg-blue-500 rounded-full"></div>
+                                <h3 class="font-bold text-xl">Motion Designer (Estágio)</h3>
+                                <p class="font-semibold text-gray-600">Celepar | 2021 - 2023</p>
+                                <p class="text-gray-700 mt-1">Criação de storyboard, decupagem, edição e animação em Premiere e After Effects.</p>
+                            </div>
+                            <div class="relative pl-6">
+                                <div class="absolute left-0 top-1 w-3 h-3 bg-blue-500 rounded-full"></div>
+                                <h3 class="font-bold text-xl">Host de Transmissão para Internet</h3>
+                                <p class="font-semibold text-gray-600">Autônomo | 2018 - 2022</p>
+                                <p class="text-gray-700 mt-1">Gerenciamento e apresentação de transmissões ao vivo, utilizando ferramentas como OBS e Streamlabs.</p>
+                            </div>
+                            <div class="relative pl-6">
+                                <div class="absolute left-0 top-1 w-3 h-3 bg-blue-500 rounded-full"></div>
+                                <h3 class="font-bold text-xl">Designer Freelancer</h3>
+                                <p class="font-semibold text-gray-600">Autônomo | 2017 - 2022</p>
+                                <p class="text-gray-700 mt-1">Foco em desenvolvimento de identidade visual e criação de conteúdo para diversas redes sociais.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section>
+                        <h2 class="text-2xl font-bold text-blue-600 border-b-2 border-blue-200 pb-2 mb-4">Habilidades</h2>
+                        <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 text-center">
+                            <div class="icon-skill p-4 bg-gray-50 rounded-lg">
+                                <i class="fab fa-unity text-4xl text-black"></i>
+                                <p class="mt-2 font-semibold">Unity</p>
+                            </div>
+                             <div class="icon-skill p-4 bg-gray-50 rounded-lg">
+                                <i class="fas fa-robot text-4xl text-teal-500"></i>
+                                <p class="mt-2 font-semibold">IA (Gemini/GPT)</p>
+                            </div>
+                             <div class="icon-skill p-4 bg-gray-50 rounded-lg">
+                                <i class="fab fa-js text-4xl text-yellow-500"></i>
+                                <p class="mt-2 font-semibold">JavaScript</p>
+                            </div>
+                             <div class="icon-skill p-4 bg-gray-50 rounded-lg">
+                                <i class="fas fa-c text-4xl text-blue-600">++</i>
+                                <p class="mt-2 font-semibold">C++</p>
+                            </div>
+                            <div class="icon-skill p-4 bg-gray-50 rounded-lg">
+                                <i class="fas fa-cube text-4xl text-orange-500"></i>
+                                <p class="mt-2 font-semibold">Blender</p>
+                            </div>
+                            <div class="icon-skill p-4 bg-gray-50 rounded-lg">
+                                <i class="fab fa-python text-4xl text-blue-500"></i>
+                                <p class="mt-2 font-semibold">Python</p>
+                            </div>
+                            <div class="icon-skill p-4 bg-gray-50 rounded-lg">
+                                <i class="fas fa-camera-retro text-4xl text-blue-800"></i>
+                                <p class="mt-2 font-semibold">Photoshop</p>
+                            </div>
+                            <div class="icon-skill p-4 bg-gray-50 rounded-lg">
+                                <i class="fas fa-video text-4xl text-purple-700"></i>
+                                <p class="mt-2 font-semibold">After Effects</p>
+                            </div>
+                            <div class="icon-skill p-4 bg-gray-50 rounded-lg">
+                                <i class="fas fa-file-powerpoint text-4xl text-red-600"></i>
+                                <p class="mt-2 font-semibold">PowerPoint</p>
+                            </div>
+                            <div class="icon-skill p-4 bg-gray-50 rounded-lg">
+                                <i class="fas fa-file-word text-4xl text-blue-700"></i>
+                                <p class="mt-2 font-semibold">Word</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html> 
